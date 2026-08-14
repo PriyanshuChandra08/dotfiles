@@ -1,0 +1,41 @@
+window#osd {
+  border-radius: 28px;
+  border: none;
+  background: rgba(32, 33, 36, 0.97); }
+  window#osd #container {
+    margin: 16px; }
+
+  window#osd image,
+  window#osd label {
+    color: rgba(232, 234, 237, 1); }
+
+  window#osd progressbar:disabled,
+  window#osd image:disabled {
+    opacity: 0.5; }
+
+  window#osd progressbar,
+  window#osd segmentedprogress {
+    min-height: 28px;
+    border-radius: 999px;
+    background: transparent;
+    border: none; }
+
+  window#osd trough,
+  window#osd segment {
+    min-height: 8;
+    border-radius: inherit;
+    border: none;
+    background: rgba(95, 99, 104, 0.6); }
+
+  window#osd progress,
+  window#osd segment.active {
+    min-height: 57;
+    border-radius: inherit;
+    border: none;
+    background: #81c995; }
+
+  window#osd segment {
+    margin-left: 8px; }
+
+    window#osd segment:first-child {
+      margin-left: 0; }

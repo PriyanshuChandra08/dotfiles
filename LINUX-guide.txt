@@ -1,0 +1,8 @@
+THIS is simple guide for Arch linux setup
+1. Setup LINUX environment (Hyprland config, waybar, terminal, photo-video viewer,web-browser and apps)
+2. File partitions (fstab)
+3. Bluetooth, Wi-Fi drivers, Sound Drivers (Pipewire,Wireplumber/Pulseaudio)
+4. Setup them and IMPORT from Dropbox 
+5. Customize the Icons, Fonts and SETUP WM or DE.
+~~CUSTOMIZATIONS~~
+	1. swww, wal, hyprland config, zsh terminal, terminals (alacritty or KITTY).
