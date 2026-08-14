@@ -32,18 +32,8 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "nautilus"
 local menu        = "hyprlauncher"
-<<<<<<< HEAD
 --local browser        = "flatpak run app.zen_browser.zen"
 local browser        = "firefox"
-=======
-<<<<<<< HEAD
-local browser        = "flatpak run app.zen_browser.zen"
---local browser        = "firefox"
-=======
---local browser        = "flatpak run app.zen_browser.zen"
-local browser        = "firefox"
->>>>>>> c45b737 (browser in hyprland.lua and vim keybind ")
->>>>>>> e42c986 (browser in hyprland.lua and vim keybind)
 
 
 -------------------
@@ -295,6 +285,7 @@ hl.bind(mainMod .. " + CONTROL + W",
    hl.dsp.exec_cmd([[img=$(find ~/Pictures/wallpapers/ -type f | shuf -n 1) && echo "$img" && wal -i "$img" && awww img "$img" --transition-type=random]]), 
     { locked = true }
 )
+hl.bind(mainMod .. "+ SHIFT + w", hl.dsp.exec_cmd("~/.config/hypr/scripts/wallpaper.sh"), { locked = true })
 
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
