@@ -32,8 +32,18 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "nautilus"
 local menu        = "hyprlauncher"
+<<<<<<< HEAD
 --local browser        = "flatpak run app.zen_browser.zen"
 local browser        = "firefox"
+=======
+<<<<<<< HEAD
+local browser        = "flatpak run app.zen_browser.zen"
+--local browser        = "firefox"
+=======
+--local browser        = "flatpak run app.zen_browser.zen"
+local browser        = "firefox"
+>>>>>>> c45b737 (browser in hyprland.lua and vim keybind ")
+>>>>>>> e42c986 (browser in hyprland.lua and vim keybind)
 
 
 -------------------
