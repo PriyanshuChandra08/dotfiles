@@ -46,11 +46,12 @@ local browser        = "firefox"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("swayosd-server")
-  hl.exec_cmd("hypridle")
-  hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("nm-applet & blueman-applet &")
-  hl.exec_cmd("waybar & dropbox &")
+	hl.exec_cmd("ulauncher --hide-window") -- Autostart the Ulauncher background daemon
+	hl.exec_cmd("swayosd-server")
+	hl.exec_cmd("hypridle")
+	hl.exec_cmd("awww-daemon")
+	hl.exec_cmd("nm-applet & blueman-applet &")
+	hl.exec_cmd("waybar & dropbox &")
 end)
 
 
@@ -240,10 +241,11 @@ hl.config({
         numlock_by_default = true,
         follow_mouse = 1,
 
-        sensitivity = -0.2, -- -1.0 - 1.0, 0 means no modification.
+        sensitivity = -0.1, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
             natural_scroll = true,
+	    tap_to_click = false,
             disable_while_typing = false,
                 scroll_factor = 0.7 --Thala For reason
         },
@@ -299,6 +301,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Escape", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd("ulauncher-toggle"))
 hl.bind(mainMod .. " + ALT + SPACE", hl.dsp.exec_cmd("wofi --show drun --allow-images"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({mode=0}))
