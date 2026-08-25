@@ -20,7 +20,7 @@ hl.monitor({
     mode     = "preferred",
     position = "auto",
     scale    = "auto",
-    icc = "/usr/share/color/icc/colord/Rec709.icc"
+    icc = "/usr/share/color/icc/colord/sRGB.icc"
 })
 
 
@@ -117,11 +117,11 @@ hl.config({
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 0.95,
-        inactive_opacity = 0.85,
+        active_opacity   = 1.00,
+        inactive_opacity = 0.90,
 
         shadow = {
-            enabled      = true,
+            enabled      = false,
             range        = 4,
             render_power = 3,
             color        = 0xee1a1a1a,
@@ -129,9 +129,10 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 4,
-            passes    = 4,
+            size      = 3,
+            passes    = 3,
             vibrancy  = 0.1696,
+	    xray = false              -- Prevents rendering blur beneath floating windows
         },
     },
 
