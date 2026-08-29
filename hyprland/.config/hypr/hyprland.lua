@@ -221,6 +221,7 @@ hl.config({
 
 hl.config({
     misc = {
+        focus_on_activate = true,
         force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
     },
@@ -250,6 +251,7 @@ hl.config({
                 scroll_factor = 0.7 --Thala For reason
         },
     },
+
 })
 
 hl.gesture({
@@ -277,6 +279,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + SHIFT + Delete", hl.dsp.exec_cmd("wlogout"), { locked = true })
 hl.bind(mainMod .. " + SHIFT + Space", hl.dsp.exec_cmd("catfish"), { locked = true })
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser), { locked = true })
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -s"), { locked = true })
     --Screenshots
     hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/Screenshots"), { locked = true })
     hl.bind("CONTROL + SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m output -o ~/Pictures/Screenshots"), { locked = true })
@@ -300,8 +303,8 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Escape", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
-hl.bind("ALT + SPACE", hl.dsp.exec_cmd("ulauncher-toggle"))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("ulauncher-toggle"))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + ALT + SPACE", hl.dsp.exec_cmd("wofi --show drun --allow-images"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({mode=0}))
@@ -418,9 +421,10 @@ match = {class = "org.pulseaudio.pavucontrol"},
 float = true
 })
 
-hl.config({
-    misc = {
-        focus_on_activate = true
-    }
+hl.window_rule({
+match = {class = "ulauncher"},
+no_shadow = true,
+border_size = 0;
+float = true
 })
 
