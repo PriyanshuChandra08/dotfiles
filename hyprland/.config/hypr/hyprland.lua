@@ -20,7 +20,7 @@ hl.monitor({
     mode     = "preferred",
     position = "auto",
     scale    = "auto",
-    icc = "/usr/share/color/icc/colord/Rec709.icc"
+    icc = "/usr/share/color/icc/colord/AppleRGB.icc"
 })
 
 
@@ -116,10 +116,12 @@ hl.config({
     decoration = {
         rounding       = 8,
         rounding_power = 2,
+	-- dim_inactive = true,
+	-- dim_strength = 0.2,  -- Value between 0.0 and 1.0 (how much to dim the inactive windows)
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.00,
-        inactive_opacity = 0.90,
+        inactive_opacity = 0.95,
 
         shadow = {
             enabled      = false,
@@ -248,7 +250,8 @@ hl.config({
             natural_scroll = true,
 	    tap_to_click = false,
             disable_while_typing = false,
-                scroll_factor = 0.7 --Thala For reason
+	  --clickfinger_behavior = true,
+            scroll_factor = 0.7 --Thala For reason
         },
     },
 
