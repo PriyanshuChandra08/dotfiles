@@ -29,10 +29,11 @@ Install (icons,fonts and shell themes) and customize them using nwg-look (often 
 **For _Arch_ LINUX**
 
     sudo pacman -Sy stow tree yazi pavucontrol hyprlock hyprlauncher nwg-look
+    sudo pacman -Sy wofi rofi awww nvim
   **Via Yay (AUR Helper)**
 
         yay -S pywal wlogout waybar-git
 
 **For _Debian-based_ LINUX distros**
 
-    sudo apt install stow tree yazi waybar nwg-look
+    sudo apt install stow tree waybar nwg-look
