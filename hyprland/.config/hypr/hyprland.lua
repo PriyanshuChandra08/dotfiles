@@ -20,7 +20,7 @@ hl.monitor({
     mode     = "preferred",
     position = "auto",
     scale    = "auto",
-    icc = "/usr/share/color/icc/colord/AppleRGB.icc"
+    icc = "/usr/share/color/icc/colord/Rec709.icc"
 })
 
 
@@ -47,7 +47,7 @@ local browser        = "firefox"
 --
 hl.on("hyprland.start", function () 
 	hl.exec_cmd("ulauncher --hide-window") -- Autostart the Ulauncher background daemon
-	hl.exec_cmd("swayosd-server")
+	hl.exec_cmd("swayosd-server & ")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("nm-applet & blueman-applet &")
