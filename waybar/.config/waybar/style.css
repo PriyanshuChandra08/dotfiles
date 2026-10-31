@@ -70,7 +70,7 @@ button:hover {
     border-radius : 10px;
     transition: all  ease-in-out;
     transition-duration: .2s;
-        min-width: 12px;
+    min-width: 12px;
     min-height: 05px
 }
 #workspaces button:hover {
@@ -82,11 +82,11 @@ button:hover {
 }
 
 #workspaces button.empty {
-    background: #444444;
+    background: radial-gradient(rgba(220,220,220,1),rgba(0,0,0,1));
     color:#444444;
     transition: all  ease-in-out;
     transition-duration: .2s;
-        min-width: 10px;
+    min-width: 10px;
     min-height: 01px
 }
 #workspaces button.empty:hover {
@@ -161,7 +161,7 @@ button:hover {
 }
 #workspaces {
     margin: 0 1px;
-	background : rgba(0,0,0,0.7);
+    background : rgba(0,0,0,0.7);
     border-radius : 15px;
     margin-right : 2px;
     margin-left : 2px;
